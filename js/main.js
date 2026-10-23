@@ -216,7 +216,7 @@ const projects = [
 })();
 
 // ============================================================
-// INTERSECTION OBSERVER — FADE-IN ANIMATIONS
+// INTERSECTION OBSERVER — FADE-IN ANIMATIONS (SAFE VERSION)
 // ============================================================
 (function initAnimations() {
     const cards = document.querySelectorAll(
@@ -225,18 +225,27 @@ const projects = [
 
     if (!cards.length) return;
 
+    // Check if user prefers reduced motion or if browser is small
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        // Fallback: keep everything visible
+        return;
+    }
+
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target); // Stop observing once visible
                 }
             });
         },
         {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px',
+            threshold: 0.05, // Trigger as soon as 5% is visible on screen
+            rootMargin: '0px 0px -20px 0px',
         }
     );
 
@@ -247,5 +256,3 @@ const projects = [
         observer.observe(card);
     });
 })();
-
-console.log('CAMI Consultancy — site loaded.');
