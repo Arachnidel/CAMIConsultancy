@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+    <polygon points="24,4 41,15 41,33 24,44 7,33 7,15"
+             fill="none" stroke="#ffffff" stroke-width="2"/>
+    <polygon points="24,13.5 32,19.5 32,28.5 24,34.5 16,28.5 16,19.5"
+             fill="#ffffff"/>
+    <text x="56" y="32" font-family="'JetBrains Mono', monospace"
+          font-size="20" font-weight="700" fill="#ffffff" letter-spacing="2">CAMI</text>
+    <text x="56" y="44" font-family="'JetBrains Mono', monospace"
+          font-size="6" fill="#9a9a9a" letter-spacing="1.8">ADVANCED MATERIALS</text>
+</svg>
