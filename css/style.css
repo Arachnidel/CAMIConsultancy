@@ -101,6 +101,7 @@ h2 span {
     background: #ccc;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+    color: #0a0a0a;
 }
 
 .btn-secondary {
@@ -151,11 +152,20 @@ h2 span {
 }
 
 .logo {
-    font-family: var(--font-mono);
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
     color: #fff;
+    transition: opacity var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
+.logo svg {
+    display: block;
+    height: 32px;
+    width: auto;
 }
 
 .nav-links {
@@ -225,8 +235,11 @@ h2 span {
     inset: 0;
     background:
         radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        linear-gradient(90deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.72) 55%, rgba(10, 10, 10, 0.48) 100%),
+        url('/assets/hero-graphene.svg'),
         var(--color-bg);
+    background-size: cover;
+    background-position: center;
     z-index: 0;
 }
 
@@ -438,6 +451,11 @@ h2 span {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+.leader-card--featured {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: linear-gradient(180deg, var(--color-surface-light) 0%, var(--color-surface) 100%);
+}
+
 .leader-badge {
     font-family: var(--font-mono);
     font-size: 0.65rem;
@@ -497,6 +515,17 @@ h2 span {
 
 .leader-details ul li strong {
     color: #fff;
+}
+
+.sub-heading {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 1.25rem 0 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .distinctions {
@@ -566,6 +595,10 @@ h2 span {
 .projects {
     padding: 80px 0 100px;
     border-top: 1px solid var(--color-border);
+    background:
+        linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.94)),
+        url('/assets/surface-microstructure.svg') center / cover,
+        var(--color-bg);
 }
 
 .project-grid {
@@ -689,7 +722,7 @@ h2 span {
 }
 
 /* ============================================================
-   CONTACT
+   CONTACT / DIRECT LINE
    ============================================================ */
 .contact {
     padding: 80px 0 60px;
@@ -697,65 +730,78 @@ h2 span {
     background: var(--color-surface);
 }
 
-.contact-form {
-    max-width: 640px;
-    margin: 0 auto 60px;
-}
-
-.form-group {
-    margin-bottom: 24px;
-}
-
-.form-group label {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+.contact-lede {
+    max-width: 620px;
     color: var(--color-text-muted);
-    text-transform: uppercase;
-    margin-bottom: 6px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 18px;
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.contact-card {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
-    border-radius: 4px;
-    color: #fff;
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    transition: border var(--transition);
-    outline: none;
+    border-radius: 8px;
+    padding: 32px 28px;
+    transition: all var(--transition);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-text-muted);
+.contact-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.contact-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0.25rem;
 }
 
-.form-feedback {
-    margin-top: 16px;
-    font-size: 0.95rem;
+.contact-role {
+    font-size: 0.9rem;
     color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
 }
 
-.form-feedback.success {
-    color: #7bcfa6;
+.contact-email {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    padding: 4px 0;
+    word-break: break-all;
 }
 
-.form-feedback.error {
-    color: #e87a7a;
+.contact-email:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
-/* Contact footer */
+.contact-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 10px 22px;
+    background: #fff;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: all var(--transition);
+}
+
+.contact-btn:hover {
+    background: #ccc;
+    color: #0a0a0a;
+    transform: translateY(-2px);
+}
+
 .contact-footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -867,6 +913,10 @@ h2 span {
     }
 
     .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards {
         grid-template-columns: 1fr;
     }
 

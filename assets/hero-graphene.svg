@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#16191b"/>
+      <stop offset="1" stop-color="#090a0b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="47%" r="62%">
+      <stop stop-color="#d2d7d9" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#fff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".72"/>
+    </linearGradient>
+    <pattern id="lattice" width="104" height="90" patternUnits="userSpaceOnUse">
+      <path d="M26 2 52 17v30L26 62 0 47V17L26 2Zm52 30 26 15v30L78 92 52 77V47l26-15Z"
+            stroke="#d8dfe2" stroke-opacity=".22" stroke-width="1"/>
+      <circle cx="26" cy="2" r="2" fill="#e2e8eb" fill-opacity=".42"/>
+      <circle cx="78" cy="32" r="2" fill="#e2e8eb" fill-opacity=".42"/>
+    </pattern>
+    <mask id="lattice-fade">
+      <rect width="1600" height="1000" fill="url(#fade)"/>
+    </mask>
+  </defs>
+  <path fill="url(#base)" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#glow)" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#lattice)" mask="url(#lattice-fade)" d="M0 0h1600v1000H0z"/>
+  <g stroke="#dbe1e3" stroke-opacity=".28" stroke-width="1.5">
+    <path d="m1040 160 112 65 112-65 112 65 112-65M1152 225v130l112 65 112-65V225M1040 420l112-65 112 65v130l112 65 112-65M1264 420v130"/>
+    <path d="m936 550 112-65 112 65 112-65 112 65 112-65"/>
+    <path d="m1152 615 112-65 112 65v130l-112 65-112-65z"/>
+  </g>
+  <g fill="#e7ecee" fill-opacity=".58">
+    <circle cx="1040" cy="160" r="4"/><circle cx="1152" cy="225" r="4"/>
+    <circle cx="1264" cy="160" r="4"/><circle cx="1376" cy="225" r="4"/>
+    <circle cx="1488" cy="160" r="4"/><circle cx="1264" cy="420" r="4"/>
+    <circle cx="1376" cy="355" r="4"/><circle cx="1488" cy="420" r="4"/>
+    <circle cx="1048" cy="485" r="4"/><circle cx="1152" cy="615" r="4"/>
+    <circle cx="1376" cy="615" r="4"/><circle cx="1488" cy="550" r="4"/>
+  </g>
+</svg>

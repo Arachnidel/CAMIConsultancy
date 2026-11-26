@@ -1,14 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CAMI — Advanced Materials Consultancy</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="CAMI — advanced materials, corrosion, coating and nanotechnology consultancy. Founded by Dr Mallika Bohm; CSO Dr Sivasambu Bohm (graphene, SWCNT/MWCNT dispersion, advanced carbon)." />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <meta property="og:title" content="CAMI — Advanced Materials Consultancy" />
+    <meta property="og:description" content="Materials, corrosion, coating and advanced carbon expertise — delivered at exactly the right time." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://camiconsultancy.com/" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
@@ -17,7 +27,16 @@
     ============================================================ -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">CAMI</a>
+            <a href="/" class="logo" aria-label="CAMI — Advanced Materials Consultancy">
+                <svg viewBox="0 0 120 32" width="120" height="32" role="img" aria-hidden="true">
+                    <polygon points="16,3 27,10 27,22 16,29 5,22 5,10"
+                             fill="none" stroke="#ffffff" stroke-width="1.5"/>
+                    <polygon points="16,9 22,13 22,20 16,24 10,20 10,13"
+                             fill="#ffffff"/>
+                    <text x="36" y="22" font-family="'JetBrains Mono', monospace"
+                          font-size="14" font-weight="700" fill="#ffffff" letter-spacing="1.5">CAMI</text>
+                </svg>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#nexus">Nexus</a></li>
                 <li><a href="#services">Services</a></li>
@@ -28,7 +47,7 @@
                 <li><a href="#knowledge">Knowledge</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -37,31 +56,31 @@
     <!-- ============================================================
     HERO / NEXUS
     ============================================================ -->
-    
     <section class="hero" id="nexus">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-        <div class="hero-tag">[ 001 / THE NEXUS ]</div>
-        <h1>
-            Materials and corrosion expertise,<br />
-            <span>delivered at exactly the right time.</span>
-        </h1>
-        <p>
-            We develop practical technical solutions for industrial materials,
-            corrosion, coating and process challenges — from failure analysis and
-            surface engineering to advanced graphene and nanomaterials. CAMI brings
-            specialist expertise to the projects that keep your assets, products
-            and performance moving forward.
-        </p>
-        <div class="hero-badges">
-            <span>FOUNDED BY DR MALLIKA BOHM</span>
-            <span>ADVANCED MATERIALS</span>
-            <span>CORROSION · COATING · NANOTECH</span>
-            <span>PATENTED GRAPHENE PRODUCTION</span>
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-tag">[ 001 / THE NEXUS ]</div>
+            <h1>
+                Materials and corrosion expertise,<br />
+                <span>delivered at exactly the right time.</span>
+            </h1>
+            <p>
+                We develop practical technical solutions for industrial materials,
+                corrosion, coating and process challenges — from failure analysis and
+                surface engineering to advanced graphene and nanomaterials. CAMI brings
+                specialist expertise to the projects that keep your assets, products
+                and performance moving forward.
+            </p>
+            <div class="hero-badges">
+                <span>FOUNDED BY DR MALLIKA BOHM</span>
+                <span>ADVANCED MATERIALS</span>
+                <span>CORROSION · COATING · NANOTECH</span>
+                <span>PATENTED GRAPHENE PRODUCTION</span>
+            </div>
+            <a href="mailto:Mallika@camiconsultancy.com?subject=CAMI%20enquiry%20—%20project%20brief"
+               class="btn-primary">Start a project →</a>
         </div>
-        <a href="#contact" class="btn-primary">Start a project →</a>
-    </div>
-</section>
+    </section>
 
     <!-- ============================================================
     SERVICES / STRATEGIC MODALITIES
@@ -72,7 +91,6 @@
             <h2>What we build.</h2>
 
             <div class="service-grid">
-                <!-- 001 -->
                 <div class="service-card" data-index="001">
                     <span class="service-number">001</span>
                     <h3>Materials &amp; Process Consultancy</h3>
@@ -90,7 +108,6 @@
                     </ul>
                 </div>
 
-                <!-- 002 -->
                 <div class="service-card" data-index="002">
                     <span class="service-number">002</span>
                     <h3>Corrosion Protection &amp; Coating</h3>
@@ -102,7 +119,6 @@
                     </p>
                 </div>
 
-                <!-- 003 -->
                 <div class="service-card" data-index="003">
                     <span class="service-number">003</span>
                     <h3>Advanced Materials &amp; Nanotechnology</h3>
@@ -114,7 +130,6 @@
                     </p>
                 </div>
 
-                <!-- 004 -->
                 <div class="service-card" data-index="004">
                     <span class="service-number">004</span>
                     <h3>Technical Solutions &amp; Project Execution</h3>
@@ -126,7 +141,6 @@
                     </p>
                 </div>
 
-                <!-- 005 -->
                 <div class="service-card" data-index="005">
                     <span class="service-number">005</span>
                     <h3>Grants, Data &amp; Knowledge</h3>
@@ -164,6 +178,15 @@
                         competitive edge. So CAMI was formed — drawing on experts from
                         multiple industries and backgrounds to deliver game-changing
                         technical solutions, independently and confidentially.
+                    </p>
+                    <p>
+                        Alongside Dr Mallika Bohm, <strong>Dr Sivasambu Bohm</strong>
+                        serves as Chief Scientific Officer — bringing 25 years of graphene,
+                        carbon nanotube and advanced carbon expertise from Tata Steel,
+                        Talga Advanced Materials, IIT Bombay, the Cambridge Graphene Centre
+                        and Imperial College London. Together they cover the full arc from
+                        protective coatings and corrosion engineering to the most advanced
+                        carbon nanomaterials in commercial production.
                     </p>
                 </div>
                 <div class="story-stats">
@@ -204,12 +227,12 @@
                 <p class="leader-focus">Protective coatings · Corrosion control · Surface engineering</p>
                 <div class="leader-details">
                     <p>
-                        While working alongside companies across multiple industries,
-                        Dr Bohm saw what so many were lacking: the right resources at the
-                        right time. Without the proper expertise when it was required,
-                        organisations wasted time and money, often couldn't resolve a
-                        problem sufficiently, and didn't gain the edge over their
-                        competitors. CAMI Consultancy was formed to fix that.
+                        Dr Bohm has spent her career at the intersection of protective
+                        coatings, corrosion science, and industrial surface engineering.
+                        She saw first-hand how often organisations lacked the right
+                        expertise at the moment it mattered most — and founded CAMI to
+                        fix that, drawing together specialists from multiple industries
+                        to deliver confidential, independent, game-changing solutions.
                     </p>
                     <ul>
                         <li><strong>Education:</strong> PhD, Condensed Matter Physics — UCL, United Kingdom</li>
@@ -220,30 +243,55 @@
             </div>
 
             <!-- CSO -->
-            <div class="leader-card">
+            <div class="leader-card leader-card--featured">
                 <div class="leader-badge">CSO</div>
                 <div class="leader-title">Chief Scientific Officer</div>
                 <h3>Dr Sivasambu Bohm</h3>
-                <p class="leader-focus">Graphene · Nanotechnology · Advanced materials</p>
+                <p class="leader-focus">
+                    Graphene · Carbon nanotubes · Advanced carbon · Conductive inks · Energy storage
+                </p>
                 <div class="leader-details">
                     <p>
-                        An internationally recognised authority on graphene, protective
-                        coatings, and nanotechnology, Dr Boehm's career spans Tata Steel,
-                        Talga, IIT Bombay, the University of Cambridge, and Imperial
-                        College London — with breakthroughs in Cr(VI)-free corrosion
-                        inhibitors, graphene-based anti-corrosion coatings, Li-ion battery
-                        anodes, and conductive inks for wearables and transport.
+                        An internationally recognised authority on graphene, carbon nanotubes and
+                        advanced carbon materials, Dr Bohm has spent 25 years taking these materials
+                        from the laboratory to commercial production. His career spans senior
+                        technical and leadership roles at Tata Steel R&amp;D, Talga Advanced
+                        Materials (CTO), IIT Bombay, the Cambridge Graphene Centre and Imperial
+                        College London, where he was a Royal Society Industry Fellow.
                     </p>
+
+                    <h4 class="sub-heading">Carbon Nanotubes &amp; Dispersion</h4>
+                    <p>
+                        Dr Bohm is a leading industrial voice on carbon nanotube dispersion — the
+                        single greatest barrier to CNT commercialisation. He advises on the
+                        selection, optimisation and scale-up of SWCNT and MWCNT dispersion
+                        processes, balancing performance against tube damage, throughput and
+                        environmental impact. His expertise spans conventional and emerging routes
+                        — high-shear, microfluidisation, milling and green-chemistry formulations —
+                        and he has led industrial implementation of CNT and graphene dispersions
+                        in real products.
+                    </p>
+
+                    <h4 class="sub-heading">Graphene &amp; Advanced Carbon</h4>
+                    <p>
+                        From graphene synthesis and functionalisation to conductive inks,
+                        anti-corrosion coatings and battery anode materials, Dr Bohm has delivered
+                        multiple commercial products across the energy, transport, construction and
+                        electronics sectors. He is equally at home in the lab and on the production
+                        line — translating novel carbon materials into repeatable, manufacturable
+                        technology.
+                    </p>
+
                     <ul>
-                        <li><strong>Education:</strong> PhD, Chemistry/Electrochemistry — University of Bath (UK); MSc &amp; BSc Chemical Engineering — Beuth University TFH Berlin</li>
-                        <li><strong>Fellowships:</strong> Royal Society Industry Fellow — University of Cambridge &amp; Imperial College London</li>
-                        <li><strong>Tenure:</strong> Principal Scientist, TATA Steel R&amp;D (UK) · CTO, Talga Advanced Materials (Cambridge) · Professor, IIT Bombay · Graphene Research Expert</li>
-                        <li><strong>Output:</strong> 49 published patents · 100+ publications &amp; conference proceedings · 15 commercial products at industrial scale</li>
+                        <li><strong>Education:</strong> PhD, Electrochemistry — University of Bath; MSc &amp; BSc Chemical Engineering — TFH Berlin</li>
+                        <li><strong>Recognition:</strong> Royal Society Industry Fellow · FRSC · C.Chem</li>
+                        <li><strong>Output:</strong> 12 granted patents · 45+ applications · 100+ publications · multiple industrial products launched</li>
                     </ul>
+
                     <div class="distinctions">
                         <span>★ Royal Society Industry Fellow (2017–2021)</span>
-                        <span>★ TATAINNOVISTA 2016 Global Winner</span>
-                        <span>★ 1000 Talents National Award — Wuxing, China</span>
+                        <span>★ TATA INNOVISTA Global Winner</span>
+                        <span>★ 1000 Talents National Award — China</span>
                     </div>
                 </div>
             </div>
@@ -294,9 +342,8 @@
         <div class="container">
             <div class="section-label">[ 006 / PROJECT COLLABORATIONS ]</div>
             <h2>The record.</h2>
-
             <div class="project-grid" id="projectGrid">
-                <!-- Projects will be injected by JavaScript -->
+                <!-- Projects injected by JavaScript -->
             </div>
         </div>
     </section>
@@ -333,40 +380,51 @@
                         Download white papers, case studies, conference presentations, and
                         publications by our team members and collaborators.
                     </p>
-                    <a href="#" class="btn-secondary">ACCESS THE LIBRARY →</a>
+                    <a href="#contact" class="btn-secondary">REQUEST RESOURCES →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    CONTACT / INTAKE GATEWAY
+    CONTACT / DIRECT LINE
     ============================================================ -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-label">[ 008 / INTAKE GATEWAY ]</div>
-            <h2>Tell us what you're trying to solve.</h2>
+            <div class="section-label">[ 008 / DIRECT LINE ]</div>
+            <h2>Talk to the people who do the work.</h2>
+            <p class="contact-lede">
+                No forms, no gatekeepers. Reach the principals directly — every enquiry
+                is read and answered personally. All discussions are confidential.
+            </p>
 
-            <form class="contact-form" id="contactForm" novalidate>
-                <div class="form-group">
-                    <label for="name">01 / Name</label>
-                    <input type="text" id="name" placeholder="Your name" required />
+            <div class="contact-cards">
+                <!-- Dr Mallika Bohm -->
+                <div class="contact-card">
+                    <div class="leader-badge">FOUNDER</div>
+                    <h3>Dr Mallika Bohm</h3>
+                    <p class="contact-role">Protective coatings · Corrosion control · Surface engineering</p>
+                    <a class="contact-email" href="mailto:Mallika@camiconsultancy.com">
+                        Mallika@camiconsultancy.com
+                    </a>
+                    <a class="contact-btn" href="mailto:Mallika@camiconsultancy.com?subject=CAMI%20enquiry%20—%20project%20brief">
+                        Email Mallika →
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="email">02 / Email</label>
-                    <input type="email" id="email" placeholder="you@company.com" required />
+
+                <!-- Dr Sivasambu Bohm -->
+                <div class="contact-card">
+                    <div class="leader-badge">CSO</div>
+                    <h3>Dr Sivasambu Bohm</h3>
+                    <p class="contact-role">Graphene · CNT dispersion · Advanced materials</p>
+                    <a class="contact-email" href="mailto:sivasambum@gmail.com">
+                        sivasambum@gmail.com
+                    </a>
+                    <a class="contact-btn" href="mailto:sivasambum@gmail.com?subject=CAMI%20enquiry%20—%20project%20brief">
+                        Email Sivasambu →
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="organization">03 / Organization</label>
-                    <input type="text" id="organization" placeholder="Company" />
-                </div>
-                <div class="form-group">
-                    <label for="brief">04 / The brief</label>
-                    <textarea id="brief" rows="5" placeholder="Describe the material, coating, or process challenge you're facing…" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary">TRANSMIT BRIEF</button>
-                <div id="formFeedback" class="form-feedback"></div>
-            </form>
+            </div>
 
             <div class="contact-footer">
                 <div class="contact-info">
@@ -384,8 +442,7 @@
                 <div class="contact-links">
                     <h4>CONTACT</h4>
                     <a href="mailto:Mallika@camiconsultancy.com">Mallika@camiconsultancy.com</a>
-                    <a href="#projects">Project collaborations</a>
-                    <a href="#contact">Intake gateway</a>
+                    <a href="mailto:sivasambum@gmail.com">sivasambum@gmail.com</a>
                     <a href="https://www.camiconsultancy.com" target="_blank">camiconsultancy.com</a>
                 </div>
             </div>
@@ -397,9 +454,6 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    SCRIPTS
-    ============================================================ -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

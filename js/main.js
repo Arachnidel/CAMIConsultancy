@@ -6,119 +6,57 @@
     const toggle = document.getElementById('menuToggle');
     const links = document.getElementById('navLinks');
 
-    // Scroll shadow
-    let lastScroll = 0;
+    if (!navbar) return;
+
     window.addEventListener('scroll', () => {
-        const current = window.scrollY;
-        if (current > 20) {
+        if (window.scrollY > 20) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        lastScroll = current;
     });
 
-    // Mobile toggle
-    toggle.addEventListener('click', () => {
-        const isOpen = links.classList.toggle('open');
-        toggle.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Close menu on link click
-    links.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            links.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
+    if (toggle && links) {
+        toggle.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('open');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', isOpen);
         });
-    });
+
+        links.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                links.classList.remove('open');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 })();
 
 // ============================================================
 // PROJECTS DATA
 // ============================================================
 const projects = [
-    {
-        id: '001',
-        country: 'SLOVENIA',
-        tag: 'CORROSION',
-        client: 'HELLA Saturnus Slovenija',
-        description:
-            'Radiowave-transparent, chemically-resistant coating developed for automotive emblems — in partnership with the National Institute of Chemistry, Slovenia.',
-    },
-    {
-        id: '002',
-        country: 'SLOVENIA',
-        tag: 'COATING',
-        client: 'Hidria d.o.o.',
-        description:
-            'Anti-stick coating for robotic electrical-steel lamination assembly, improving automated manufacturing reliability.',
-    },
-    {
-        id: '003',
-        country: 'THAILAND',
-        tag: 'CORROSION',
-        client: 'Siam Industrial Wire Co. Ltd',
-        description:
-            'Anti-corrosion coatings for pre-stressed concrete wires, plus a lubricant composition for high-speed steel wire drawing.',
-    },
-    {
-        id: '004',
-        country: 'UNITED KINGDOM',
-        tag: 'GRAPHENE',
-        client: 'Versarien',
-        description:
-            'Graphene-incorporated zinc-rich primer with enhanced corrosion protection for steel infrastructure.',
-    },
-    {
-        id: '005',
-        country: 'CHINA',
-        tag: 'GRAPHENE',
-        client: 'Runhu',
-        description:
-            'Graphene-based abrasion-resistant coating for diamond cutting wheels with extended service life; graphene zinc-silicate coating for steel.',
-    },
-    {
-        id: '006',
-        country: 'INDIA',
-        tag: 'CONDUCTIVE INK',
-        client: 'MATCON',
-        description:
-            'Conductive ink and graphene coatings developed for the aerospace sector.',
-    },
-    {
-        id: '007',
-        country: 'FRANCE',
-        tag: 'MATERIALS',
-        client: 'TESEM',
-        description:
-            'Specialist materials consultancy for cosmetic and personal-care packaging applications.',
-    },
-    {
-        id: '008',
-        country: 'UK & INDIA',
-        tag: 'ENERGY',
-        client: 'Rerise',
-        description:
-            'Energy storage and wireless charging solutions developed for the automotive industry.',
-    },
-    {
-        id: '009',
-        country: 'NORWAY',
-        tag: 'GRAPHENE',
-        client: 'Abalonyx AS',
-        description:
-            'Graphene-enhanced coatings for advanced surface protection.',
-    },
-    {
-        id: '010',
-        country: 'CHINA',
-        tag: 'GRAPHENE',
-        client: 'TECHVALLEY',
-        description:
-            'Graphene-enhanced concrete for next-generation construction performance.',
-    },
+    { id: '001', country: 'SLOVENIA', tag: 'CORROSION', client: 'HELLA Saturnus Slovenija',
+      description: 'Radiowave-transparent, chemically-resistant coating developed for automotive emblems — in partnership with the National Institute of Chemistry, Slovenia.' },
+    { id: '002', country: 'SLOVENIA', tag: 'COATING', client: 'Hidria d.o.o.',
+      description: 'Anti-stick coating for robotic electrical-steel lamination assembly, improving automated manufacturing reliability.' },
+    { id: '003', country: 'THAILAND', tag: 'CORROSION', client: 'Siam Industrial Wire Co. Ltd',
+      description: 'Anti-corrosion coatings for pre-stressed concrete wires, plus a lubricant composition for high-speed steel wire drawing.' },
+    { id: '004', country: 'UNITED KINGDOM', tag: 'GRAPHENE', client: 'Versarien',
+      description: 'Graphene-incorporated zinc-rich primer with enhanced corrosion protection for steel infrastructure.' },
+    { id: '005', country: 'CHINA', tag: 'GRAPHENE', client: 'Runhu',
+      description: 'Graphene-based abrasion-resistant coating for diamond cutting wheels with extended service life; graphene zinc-silicate coating for steel.' },
+    { id: '006', country: 'INDIA', tag: 'CONDUCTIVE INK', client: 'MATCON',
+      description: 'Conductive ink and graphene coatings developed for the aerospace sector.' },
+    { id: '007', country: 'FRANCE', tag: 'MATERIALS', client: 'TESEM',
+      description: 'Specialist materials consultancy for cosmetic and personal-care packaging applications.' },
+    { id: '008', country: 'UK & INDIA', tag: 'ENERGY', client: 'Rerise',
+      description: 'Energy storage and wireless charging solutions developed for the automotive industry.' },
+    { id: '009', country: 'NORWAY', tag: 'GRAPHENE', client: 'Abalonyx AS',
+      description: 'Graphene-enhanced coatings for advanced surface protection.' },
+    { id: '010', country: 'CHINA', tag: 'GRAPHENE', client: 'TECHVALLEY',
+      description: 'Graphene-enhanced concrete for next-generation construction performance.' },
 ];
 
 // ============================================================
@@ -138,7 +76,7 @@ const projects = [
           </div>
           <h4>${p.client}</h4>
           <p>${p.description}</p>
-          <a href="#" class="project-link">ENGAGEMENT → DETAIL</a>
+          <span class="project-link">ENGAGEMENT</span>
         </div>
       `
         )
@@ -146,58 +84,7 @@ const projects = [
 })();
 
 // ============================================================
-// CONTACT FORM
-// ============================================================
-(function initForm() {
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
-
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const organization = document.getElementById('organization').value.trim();
-        const brief = document.getElementById('brief').value.trim();
-
-        // Simple validation
-        if (!name || !email || !brief) {
-            feedback.className = 'form-feedback error';
-            feedback.textContent = 'Please fill in all required fields (Name, Email, and Brief).';
-            return;
-        }
-
-        if (!email.includes('@') || !email.includes('.')) {
-            feedback.className = 'form-feedback error';
-            feedback.textContent = 'Please enter a valid email address.';
-            return;
-        }
-
-        // Simulate submission
-        feedback.className = 'form-feedback';
-        feedback.textContent = 'Sending...';
-
-        setTimeout(() => {
-            feedback.className = 'form-feedback success';
-            feedback.textContent =
-                '✓ Brief transmitted successfully. We\'ll be in touch within 24 hours.';
-
-            // Optionally reset
-            // form.reset();
-
-            // Clear success after 8 seconds
-            setTimeout(() => {
-                feedback.className = 'form-feedback';
-                feedback.textContent = '';
-            }, 8000);
-        }, 1200);
-    });
-})();
-
-// ============================================================
-// SMOOTH SCROLL FOR ANCHOR LINKS (progressive enhancement)
+// SMOOTH SCROLL FOR ANCHOR LINKS
 // ============================================================
 (function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -207,7 +94,7 @@ const projects = [
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                const offset = 80; // navbar height buffer
+                const offset = 80;
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top, behavior: 'smooth' });
             }
@@ -216,7 +103,7 @@ const projects = [
 })();
 
 // ============================================================
-// INTERSECTION OBSERVER — FADE-IN ANIMATIONS (SAFE VERSION)
+// FADE-IN ANIMATIONS
 // ============================================================
 (function initAnimations() {
     const cards = document.querySelectorAll(
@@ -225,11 +112,9 @@ const projects = [
 
     if (!cards.length) return;
 
-    // Check if user prefers reduced motion or if browser is small
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-        // Fallback: keep everything visible
         return;
     }
 
@@ -239,14 +124,11 @@ const projects = [
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target); // Stop observing once visible
+                    observer.unobserve(entry.target);
                 }
             });
         },
-        {
-            threshold: 0.05, // Trigger as soon as 5% is visible on screen
-            rootMargin: '0px 0px -20px 0px',
-        }
+        { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
 
     cards.forEach((card) => {

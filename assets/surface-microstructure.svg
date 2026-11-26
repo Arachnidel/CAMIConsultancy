@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" fill="none">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#171a1c"/>
+      <stop offset="1" stop-color="#0a0b0c"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="74%" cy="42%" r="68%">
+      <stop stop-color="#c6ced1" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grain" width="86" height="86" patternUnits="userSpaceOnUse">
+      <path d="M0 22 22 0h42l22 22v42L64 86H22L0 64V22Z"
+            stroke="#dce2e4" stroke-opacity=".13" stroke-width="1"/>
+      <path d="m0 22 22 22h42l22-22M22 44v42m42-42v42"
+            stroke="#dce2e4" stroke-opacity=".08" stroke-width="1"/>
+      <circle cx="22" cy="44" r="2" fill="#e7ecee" fill-opacity=".24"/>
+      <circle cx="64" cy="44" r="2" fill="#e7ecee" fill-opacity=".24"/>
+    </pattern>
+    <linearGradient id="veil" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#0a0a0a" stop-opacity=".94"/>
+      <stop offset=".48" stop-color="#0a0a0a" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#0a0a0a" stop-opacity=".32"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#ground)" d="M0 0h1600v800H0z"/>
+  <path fill="url(#sheen)" d="M0 0h1600v800H0z"/>
+  <path fill="url(#grain)" d="M0 0h1600v800H0z"/>
+  <g stroke="#e0e5e7" stroke-opacity=".19" stroke-width="2">
+    <path d="M760 800c110-160 116-269 215-369s226-115 346-260"/>
+    <path d="M885 800c92-150 120-251 226-349s216-119 335-257"/>
+    <path d="M1010 800c82-145 134-240 233-329s210-125 320-249"/>
+    <path d="M1135 800c78-136 142-225 239-309s196-123 289-218"/>
+  </g>
+  <g fill="#e7ecee" fill-opacity=".34">
+    <circle cx="975" cy="468" r="5"/><circle cx="1186" cy="330" r="4"/>
+    <circle cx="1321" cy="220" r="6"/><circle cx="1434" cy="126" r="4"/>
+    <circle cx="1087" cy="624" r="4"/><circle cx="1277" cy="505" r="5"/>
+    <circle cx="1448" cy="378" r="4"/>
+  </g>
+  <path fill="url(#veil)" d="M0 0h1600v800H0z"/>
+</svg>
